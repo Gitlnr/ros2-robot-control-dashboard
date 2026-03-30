@@ -2,23 +2,30 @@
 This is a full-stack ROS 2–based robotics project designed to demonstrate real-time communication, system integration, and robot control. The system simulates:
 * ROS 2 node-based communication
 * Real-time data exchange using topics, services, and actions
-* Integration between Yard Dog platform and Robot Arm
+* Integration between Vehicle System platform and Robot Arm
 * Web-based monitoring and control interface
 ---
 ## **II. Project Structure**
 
 ```
-ROS2_PROJECT/
+ros2-robot-control-dashboard/
 │
-├── ros2_nodes/
-├── communication_diagram/
-├── web_interface/
-├── scripts/
-├── launch/
-├── README.md
-└── docs/
-
-
+├── ROS2_Project/
+│   └── src/
+│       └── ROS2_Project_pkg/
+│           ├── ROS2_Project_pkg/
+│           │   ├── status_publisher.py
+│           │   ├── command_listener.py
+│           │   ├── robotarm_listener.py
+│           │   ├── hubpilot_listener.py
+│           │   ├── flask_server.py
+│           │   ├── __init__.py
+│           │   └── templates/
+│           │       └── index.html
+│           │
+│           └── setup.py
+│
+└── README.md
 ```
 ---
 ## **III. Components**
@@ -92,7 +99,7 @@ ros2 run <package_name> <node_name>
 ros2 launch <package_name> <launch_file>.py
 ```
 
-5. Open web interface (if applicable)
+5. Open web interface
 
 ```
 http://localhost:<port>
