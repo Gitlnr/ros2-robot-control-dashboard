@@ -17,7 +17,7 @@ ros2-robot-control-dashboard/
 │           │   ├── status_publisher.py
 │           │   ├── command_listener.py
 │           │   ├── robotarm_listener.py
-│           │   ├── hubpilot_listener.py
+│           │   ├── vehicle_listener.py
 │           │   ├── flask_server.py
 │           │   ├── __init__.py
 │           │   └── templates/
